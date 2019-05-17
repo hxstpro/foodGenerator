@@ -22,4 +22,4 @@ while response == 'n':
         print('Do you wanna eat ' + str(ranPlace) + ', ' +ranInsultA + "?")
         response = input().lower()
         print()
-print('Enjoy your $' + str(foodCost) + ' of ' + ranPlace + ', ' + ranInsultB + ".")
+print('Enjoy your $' + str(foodCost) + ' of ' + ranPlace + ', ' + ranInsultB + ". See you tomorrow!")
