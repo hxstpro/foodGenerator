@@ -1,12 +1,17 @@
 #! python3
 
 import random
-foodPlaces = ['Bdubs', 'Chiptole', 'Penn Station', 'Skyline', 'Da PuNcAkEs', 'Popeyes', 'Arbys', 'Five Guys',
-              'Mikes Nashville', 'Hardees', 'Jimmy Johns', 'China Cottage', 'Main St. Deli', 'Noodles & Co', 'El Toro']
-insultA = ['fattyboi', 'ugly nerd', 'loser', 'jerkface', 'dunce', 'cretin', 'fat cow', 'dorkface', 'wankaa', 'dingbat', 'stupid idiot',
-           'pinhead', 'reeeeeee-tard', 'troglodyte', 'butt-sniff', 'turdmunch', 'fart sniffer']
-insultB =['you imperialist flunkey', 'you imperialist lackey', 'you half-baked traitor', 'you reckless reactionary',
-          'you politically illiterate militarist', 'you shameless beast']
+
+foodPlaces = []
+with open('foodPlaces.txt') as filehandle:
+        foodPlaces = [current_place.rstrip() for current_place in filehandle.readlines()]
+insultA= []
+with open('insultA.txt') as filehandle:
+        insultA = [current_place.rstrip() for current_place in filehandle.readlines()]
+insultB= []
+with open('insultB.txt') as filehandle:
+        insultB = [current_place.rstrip() for current_place in filehandle.readlines()]
+        
 foodCost = round(random.uniform(10, 69))
 
 response = 'n'
