@@ -1,6 +1,8 @@
 #! python3
 
 import random
+import os
+import time
 
 foodPlaces = []
 with open('foodPlaces.txt') as filehandle:
@@ -20,6 +22,8 @@ while response == 'n':
         ranInsult2 = random.choice(insult)
         print('Do you wanna eat ' + str(ranPlace) + ', ' +ranInsult + "?")
         response = input().lower()
-        print()
-
+        print()       
 print('Enjoy your $' + str(foodCost) + ' of ' + ranPlace + ', ' + ranInsult2 + ". See you tomorrow!")
+print()
+
+time.sleep(3)
