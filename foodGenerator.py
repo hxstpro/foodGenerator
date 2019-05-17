@@ -1,7 +1,6 @@
 #! python3
 
 import random
-import os
 import time
 
 foodPlaces = []
