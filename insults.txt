@@ -1,4 +1,3 @@
-#insults scraped from (http://www.insult.wiki/wiki/Insult_List)
 you amateur
 you animal
 you anorak
@@ -398,4 +397,3 @@ you yahoo
 you yes-man
 you zitface
 you zounderkite
-#insults scraped from (http://www.insult.wiki/wiki/Insult_List)
