@@ -12,7 +12,7 @@ foodCost = round(random.uniform(10, 69))
 
 response = ''
 while response != 'y':
-    print('Do you wanna eat ' + str(random.choice(foodPlaces)) + ', ' + random.choice(insult) + "?")
+    print('Do you wanna eat ' + random.choice(foodPlaces) + ', ' + random.choice(insult) + "?")
     response = input().lower()
 print()
 print('Enjoy your $' + str(foodCost) + ' of ' + random.choice(foodPlaces) + ', ' + random.choice(insult) + ". See you tomorrow!")
