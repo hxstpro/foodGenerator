@@ -9,12 +9,14 @@ with open('insults.txt') as filehandle:
     insult = [current_place.rstrip() for current_place in filehandle.readlines()]
 
 foodCost = round(random.uniform(10, 69))
+random.shuffle(foodPlaces)
 
 response = ''
 while response != 'y':
-    print('Do you wanna eat ' + random.choice(foodPlaces) + ', ' + random.choice(insult) + "?")
+    del foodPlaces[0]
+    print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + "?")
     response = input().lower()
-print()
-print('Enjoy your $' + str(foodCost) + ' of ' + random.choice(foodPlaces) + ', ' + random.choice(insult) + ". See you tomorrow!")
 
-time.sleep(3)
+print('Enjoy your $' + str(foodCost) + ' of ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '. See you next Tuesday!!!')
+   
+time.sleep(5)
