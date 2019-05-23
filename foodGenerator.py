@@ -11,12 +11,20 @@ with open('insults.txt') as filehandle:
 foodCost = round(random.uniform(10, 69))
 random.shuffle(foodPlaces)
 
-response = ''
+print('Hungry for lunch but you\'re also a little bitch and can\'t decide? Let me help!')
+response = input('Press [ENTER] to continue. . .')
+print()
 while response != 'y':
-    del foodPlaces[0]
-    print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + "?")
-    response = input().lower()
+        try:
+            del foodPlaces[0]
+            print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '? -- Press "Y" or "N": ')
+            response = input().lower()
+            print()
+        except IndexError:
+            print('WHOOPS: You\'re all out of options. Try again loser!!')
+            break
+        continue
+else:       
+        print('Enjoy your $' + str(foodCost) + ' of ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '. See you next Tuesday!!!')            
 
-print('Enjoy your $' + str(foodCost) + ' of ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '. See you next Tuesday!!!')
-   
 time.sleep(5)
