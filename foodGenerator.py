@@ -21,7 +21,7 @@ while response != 'y':
             response = input().lower()
             print()
         except IndexError:
-            print('WHOOPS: You\'re all out of options. Try again loser!!')
+            print('WHOOPS: You\'re all out of options. Try again nerd!!')
             break
         continue
 else:       
