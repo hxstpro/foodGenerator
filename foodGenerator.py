@@ -12,8 +12,41 @@ foodCost = round(random.uniform(10, 69))
 random.shuffle(foodPlaces)
 
 print('Hungry for lunch but you\'re also a little bitch and can\'t decide where to eat? Let me help!')
-response = input('Press [ENTER] to continue. . .')
+time.sleep(.500)
+print('Welcome to the Restaurant-O-Generator 2000')
+time.sleep(.500)
+pressEnter = input('Press [ENTER] to continue . . .')
 print()
+time.sleep(.500)
+print('========================')
+time.sleep(.300)
+print('[+] accessing local restaurants . . .')
+time.sleep(3)
+print('[+] finished. importing database . . .')
+time.sleep(.300)
+print('[+] starting RNGesus . . .')
+time.sleep(.300)
+print('[+] daemon started successfully!')
+time.sleep(.300)
+print('[+] importing "asshole.dict" . . .')
+time.sleep(1)
+print('[+] "asshole.dict" loaded - success!!!')
+time.sleep(.300)
+print('[+] scanning "dictionary.index" . . .')
+time.sleep(1)
+print('[+] "dictionary.index" loaded - success!!!')
+time.sleep(.300)
+print('[+] program starting  . . .')
+print('[+] complete  . . .')
+print('========================')
+time.sleep(2)
+
+print()
+
+#def user_input(response):
+#    if 
+
+response = 0
 while response != 'y':
         try:
             del foodPlaces[0]
