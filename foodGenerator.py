@@ -11,7 +11,7 @@ with open('insults.txt') as filehandle:
 foodCost = round(random.uniform(10, 69))
 random.shuffle(foodPlaces)
 
-print('Hungry for lunch but you\'re also a little bitch and can\'t decide? Let me help!')
+print('Hungry for lunch but you\'re also a little bitch and can\'t decide where to eat? Let me help!')
 response = input('Press [ENTER] to continue. . .')
 print()
 while response != 'y':
