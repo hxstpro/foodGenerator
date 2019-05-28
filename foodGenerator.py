@@ -39,13 +39,21 @@ print('[+] complete  . . .')
 time.sleep(1)
 print()
 
+YesSet = {'y', 'yeah', 'yes', 'heck yeah', 'yep'}
+NoSet = {'n', 'no', 'nope', 'nah'}
+AllSet = YesSet.copy()
+AllSet.update(NoSet)
 
 response = 0
-while response != 'y':
+while response not in YesSet:
         try:
             print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '? -- Press "Y" or "N": ')
             response = input().lower()
-            if(response == 'y'):
+            while response not in AllSet:
+                print('HEY DICKHEAD, I SAID DO YOU WANT TO EAT ' + str(foodPlaces[0]).upper() + ' OR NOT?!')
+                response = input().lower()
+                continue
+            if response in YesSet:
                 continue
             print()
             del foodPlaces[0]
