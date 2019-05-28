@@ -45,6 +45,8 @@ while response != 'y':
         try:
             print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '? -- Press "Y" or "N": ')
             response = input().lower()
+            if(response == 'y'):
+                continue
             print()
             del foodPlaces[0]
         except IndexError:
