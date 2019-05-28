@@ -36,20 +36,17 @@ print('[+] "dictionary.index" loaded - success!!!')
 time.sleep(.300)
 print('[+] program starting  . . .')
 print('[+] complete  . . .')
-time.sleep(2)
-
+time.sleep(1)
 print()
 
-#def user_input(response):
-#    if 
 
 response = 0
 while response != 'y':
         try:
-            del foodPlaces[0]
             print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '? -- Press "Y" or "N": ')
             response = input().lower()
             print()
+            del foodPlaces[0]
         except IndexError:
             print('WHOOPS: You\'re all out of options. Try again nerd!!')
             break
