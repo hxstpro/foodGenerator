@@ -10,6 +10,10 @@ with open('insults.txt') as filehandle:
 
 foodCost = round(random.uniform(10, 69))
 random.shuffle(foodPlaces)
+YesSet = {'y', 'yeah', 'yes', 'heck yeah', 'yep'}
+NoSet = {'n', 'no', 'nope', 'nah'}
+AllSet = YesSet.copy()
+AllSet.update(NoSet)
 
 print('Hungry for lunch but you\'re also a little bitch and can\'t decide where to eat? Let me help!')
 time.sleep(.500)
@@ -39,18 +43,14 @@ print('[+] complete  . . .')
 time.sleep(1)
 print()
 
-YesSet = {'y', 'yeah', 'yes', 'heck yeah', 'yep'}
-NoSet = {'n', 'no', 'nope', 'nah'}
-AllSet = YesSet.copy()
-AllSet.update(NoSet)
-
 response = 0
 while response not in YesSet:
         try:
-            print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '? -- Press "Y" or "N": ')
+            print('Do you wanna eat some ' + str(foodPlaces[0]) + ', ' + random.choice(insult) + '?')
             response = input().lower()
+            print()
             while response not in AllSet:
-                print('HEY DICKHEAD, I SAID DO YOU WANT TO EAT ' + str(foodPlaces[0]).upper() + ' OR NOT?!')
+                print('HEY DICKHEAD! I SAID DO YOU WANT TO EAT ' + str(foodPlaces[0]).upper() + ' OR NOT?!')
                 response = input().lower()
                 continue
             if response in YesSet:
