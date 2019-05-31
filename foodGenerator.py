@@ -55,7 +55,6 @@ while response not in YesSet:
                 continue
             if response in YesSet:
                 continue
-            print()
             del foodPlaces[0]
         except IndexError:
             print('WHOOPS: You\'re all out of options. Try again nerd!!')
