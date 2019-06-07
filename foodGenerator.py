@@ -10,8 +10,8 @@ with open('insults.txt') as filehandle:
 
 foodCost = round(random.uniform(10, 69))
 random.shuffle(foodPlaces)
-YesSet = {'y', 'yeah', 'yes', 'heck yeah', 'yep'}
-NoSet = {'n', 'no', 'nope', 'nah'}
+YesSet = {'y', 'yeah', 'yes', 'heck yeah', 'yep', 'ja'}
+NoSet = {'n', 'no', 'nope', 'nah', 'nein'}
 AllSet = YesSet.copy()
 AllSet.update(NoSet)
 
